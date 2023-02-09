@@ -142,6 +142,7 @@ public class TestDAO {
                         rs.getInt(4),
                         rs.getInt(5));
             }
+            conn.close();
         } catch (Exception e) {
         }
         return a;
@@ -210,48 +211,4 @@ public class TestDAO {
         }
     }
 
-//    public static void main(String[] args) {
-//        PreparedStatement ps = null;
-//        ResultSet rs = null;
-//        TestDAO dao = new TestDAO();
-//        List<Test> list = dao.getAllTest();
-//        Test a = dao.getTestByID(1);
-//        System.out.println(a);
-//
-//        for (Test o : list) {
-//            System.out.println("TestID:"+o.getTestID()+" Name:"+o.getName()+" TagsID:"+o.getTagsID()+
-//                               " LevelID:"+o.getLevelID()+" timeBigin:"+o.getTimeBigin()+" timeExpire:"+o.getTimeExpire()+
-//                               " Duration:"+o.getDuration()+" numberQuestion:"+o.getNumberQuestion()+" ResultID:"+o.getResultID());
-//        }
-//
-//        int TagsID = 3;
-//        int LevelID = 5;
-//        String Name = "Lamborghini";
-//        int Duration = 10;
-//        int numberQuestion = 10;
-//        int TestID = 10;
-//        String query = "update `test` \n"
-//                + "set `Name` = ? `TagID` = ?, `LevelID` = ?,`Duration` = ?, `numberQuestion` = ?\n"
-//                + "where `TestID` = ?";
-//        try {
-//            Connection conn = HikariCPDataSource.getConnection();//mo ket noi voi sql
-//            ps = conn.prepareStatement(query);
-//            ps.setString(1, Name);
-//            ps.setInt(2, TagsID);
-//            ps.setInt(3, LevelID);
-//            ps.setInt(4, Duration);
-//            ps.setInt(5, numberQuestion);
-//            ps.setInt(6, TestID);
-//            int row = ps.executeUpdate();
-//            if (row != 0) {
-//                System.out.println("thêm thành công " + row);
-//                System.out.println("Update thành công " + row);
-//                System.out.println("Xoá thành công " + row);
-//            }
-//            conn.close();
-//        } catch (Exception e) {
-//        }
-//        AnswerOfQuestion AvsQ = dao.getAnsandQues(2);
-//        System.out.println(AvsQ);
-//    }
 }

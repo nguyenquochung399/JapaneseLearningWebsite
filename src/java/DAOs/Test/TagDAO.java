@@ -93,29 +93,4 @@ public class TagDAO {
         }
     }
     
-    public static void main(String[] args) {
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        TagDAO dao = new TagDAO();
-        List<Tag> list = dao.getAllTag();
-
-        for (Tag o : list) {
-//            System.out.println("OptionID: " + o.getTagID()+ "      Descriptions: " + o.getDesc());
-        }
-//        int ID = 7; String Tag = "N9";
-//        String query = "delete from Tag "
-//                + "where ID = ?";
-//        try {
-//            conn = new DBcontext().getConnection();//mo ket noi voi sql
-//            ps = conn.prepareStatement(query);
-//            ps.setInt(1, ID);
-//            int row = ps.executeUpdate();
-//            if(row != 0){
-////                System.out.println("thêm thành công " + row);
-////                System.out.println("Update thành công " + row);
-//                System.out.println("Xoá thành công " + row);
-//            }
-//        } catch (Exception e) {
-//        }
-    }
 }

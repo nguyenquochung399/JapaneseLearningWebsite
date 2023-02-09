@@ -39,6 +39,7 @@ public class ResultDAO {
                         rs.getInt(6),
                         rs.getInt(7)));
             }
+            conn.close();
         } catch (Exception e) {
         }
         return list;
@@ -63,6 +64,7 @@ public class ResultDAO {
                         rs.getInt(6),
                         rs.getInt(7));
             }
+            conn.close();
         } catch (Exception e) {
         }
         return a;
@@ -85,6 +87,7 @@ public class ResultDAO {
                         rs.getInt(6),
                         rs.getInt(7)));
             }
+            conn.close();
         } catch (Exception e) {
         }
         return list;
@@ -107,6 +110,7 @@ public class ResultDAO {
                         rs.getInt(6),
                         rs.getInt(7)));
             }
+            conn.close();
         } catch (Exception e) {
         }
         return list;
@@ -129,6 +133,7 @@ public class ResultDAO {
                         rs.getInt(6),
                         rs.getInt(7));
             }
+            conn.close();
         } catch (Exception e) {
         }
         return a;
@@ -147,6 +152,7 @@ public class ResultDAO {
             ps.setInt(5, Score);
             ps.setInt(6, trueQuestion);
             ps.executeUpdate();
+            conn.close();
         } catch (Exception e) {
         }
     }
@@ -158,6 +164,7 @@ public class ResultDAO {
             ps = conn.prepareStatement(query);
             ps.setInt(1, ResultID);
             ps.executeUpdate();
+            conn.close();
         } catch (Exception e) {
         }
     }
@@ -176,46 +183,9 @@ public class ResultDAO {
             ps.setInt(6, trueQuestion);
             ps.setInt(7, ResultID);
             ps.executeUpdate();
+            conn.close();
         } catch (Exception e) {
         }
     }
     
-    public static void main(String[] args) {
-        Connection conn = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        ResultDAO dao = new ResultDAO();
-//        List<Result> list = dao.getResultByUser(2);
-//        System.out.println(list);
-
-        Result a = dao.getResultbyID(1);
-        System.out.println(a);
-
-//        for (Result o : list) {
-//            System.out.println("ResultID: " + o.getResultID() + " UserID: " + o.getUserID() + " TestID: " + o.getTestID()
-//                    + " Score: " + o.getScore() + " trueQuestion: " + o.getTrueQuestion());
-//        }
-//        int ResultID = 5; int UserID = 3; int TestID = 1; int Score = 16; int trueQuestion = 8;
-//        String query = "INSERT Results \n" +
-//                       "(ResultID,UserID,TestID,Score,trueQuestion)\n" +
-//                       "VALUES(?,?,?,?,?)";
-//        try {
-//            conn = new DBcontext().getConnection();//mo ket noi voi sql
-//            ps = conn.prepareStatement(query);
-//            ps.setInt(1, ResultID);
-//            ps.setInt(2, UserID);
-//            ps.setInt(3, TestID);
-//            ps.setInt(4, Score);
-//            ps.setInt(5, trueQuestion);
-//            int row = ps.executeUpdate();
-//            if(row != 0){
-////                System.out.println("thêm thành công " + row);
-////                System.out.println("Update thành công " + row);
-//                System.out.println("Xoá thành công " + row);
-//            }
-//        } catch (Exception e) {
-//        }
-//        ResultDAO dao = new ResultDAO();
-        System.out.println(dao.getResultbyID(1));
-    }
 }

@@ -37,6 +37,7 @@ public class CodeDAO {
                     
                     codeList.add(ac);
                 }
+                conn.close();
             }
             return codeList;
         } catch (SQLException ex) {
@@ -62,6 +63,7 @@ public class CodeDAO {
                     code.setExpiryDate(rs.getString("expiryDate"));
                     code.setUserID(rs.getInt("userID"));
                 }
+                conn.close();
             }
             return code;
         } catch (SQLException ex) {
@@ -87,6 +89,7 @@ public class CodeDAO {
                     code.setExpiryDate(rs.getString("expiryDate"));
                     code.setUserID(user_id);
                 }
+                conn.close();
             }
             return code;
         } catch (SQLException ex) {
@@ -107,6 +110,7 @@ public class CodeDAO {
                 st.setInt(3, c.getUserID());
                 
                 st.executeUpdate();
+                conn.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(NotificationDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -126,6 +130,7 @@ public class CodeDAO {
                 st.setInt(4, c.getCodeID());
                 
                 st.executeUpdate();
+                conn.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(NotificationDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -141,6 +146,7 @@ public class CodeDAO {
                 st.setInt(1, code_id);
                 
                 st.executeUpdate();
+                conn.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(NotificationDAO.class.getName()).log(Level.SEVERE, null, ex);

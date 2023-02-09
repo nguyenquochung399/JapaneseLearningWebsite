@@ -135,31 +135,4 @@ public class QuestionDAO {
         }
     }
 
-    public static void main(String[] args) {
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        QuestionDAO dao = new QuestionDAO();
-        List<Question> list = dao.getAllQuestion();
-
-        for (Question o : list) {
-            System.out.println("QuestionID: " + o.getQuestionID() + " Question: " + o.getQuestion());
-        }
-//        Question a = dao.getQuestionByID(4);
-//        System.out.println("QuestionID: " + a.getQuestionID() + " Question: " + a.getQuestion());
-//        int ID = 5; int QuestionID = 1; String Question = "Lamborghini";
-//        String query = "delete from Question "
-//                + "where ID = ?";
-//        try {
-//            conn = new DBcontext().getConnection();//mo ket noi voi sql
-//            ps = conn.prepareStatement(query);
-//            ps.setInt(1, ID);
-//            int row = ps.executeUpdate();
-//            if(row != 0){
-////                System.out.println("thêm thành công " + row);
-////                System.out.println("Update thành công " + row);
-//                System.out.println("Xoá thành công " + row);
-//            }
-//        } catch (Exception e) {
-//        }
-    }
 }

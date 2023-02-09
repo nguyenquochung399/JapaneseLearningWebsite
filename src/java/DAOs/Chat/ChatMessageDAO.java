@@ -71,6 +71,7 @@ public class ChatMessageDAO {
                     cMessage.setTime(rs.getString("time"));
                     cMessage.setSessionID(rs.getInt("sessionID"));
                 }
+                conn.close();
                 st.close();
                 rs.close();
             }
@@ -98,6 +99,7 @@ public class ChatMessageDAO {
                     cMessage.setTime(rs.getString("time"));
                     cMessage.setSessionID(rs.getInt("sessionID"));
                 }
+                conn.close();
                 st.close();
                 rs.close();
             }
@@ -122,7 +124,7 @@ public class ChatMessageDAO {
                 st.setInt(4, cm.getSessionID());
 
                 st.executeUpdate();
-
+                conn.close();
                 st.close();
             }
         } catch (SQLException ex) {
@@ -144,7 +146,7 @@ public class ChatMessageDAO {
                 st.setInt(5, cm.getMessageID());
 
                 st.executeUpdate();
-
+                conn.close();
                 st.close();
             }
         } catch (SQLException ex) {
@@ -161,7 +163,7 @@ public class ChatMessageDAO {
                 st.setInt(1, cm.getMessageID());
 
                 st.executeUpdate();
-
+                conn.close();
                 st.close();
             }
         } catch (SQLException ex) {

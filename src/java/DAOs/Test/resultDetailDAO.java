@@ -172,32 +172,4 @@ public class resultDetailDAO {
         }
     }
 
-    public static void main(String[] args) {
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        resultDetailDAO dao = new resultDetailDAO();
-//        ResultDetail resultDetail = dao.getAllResultDetail();
-        List<ResultDetail> list = dao.getAllResultDetail();
-        System.out.println(list);
-
-//        
-//        for (Levels o : list) {
-//            System.out.println("LevelID: " + o.getLevelID()+ " Descriptions: " + o.getDESC());
-//        }
-//        int LevelID = 8; String DESC = "N12";
-//       String query = "INSERT INTO `levels`(`LevelID`, `DESC`) VALUES (?,?)";
-//        try {
-//            conn = new DBConnection().getConnection();//mo ket noi voi sql
-//            ps = conn.prepareStatement(query);
-//            ps.setInt(1, LevelID);
-//            ps.setString(2, DESC);
-//            int row = ps.executeUpdate();
-//            if(row != 0){
-//                System.out.println("thêm thành công " + row);
-////                System.out.println("Update thành công " + row);
-////                System.out.println("Xoá thành công " + row);
-//            }
-//        } catch (Exception e) {
-//        }
-    }
 }

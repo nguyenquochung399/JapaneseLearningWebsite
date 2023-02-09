@@ -94,31 +94,4 @@ public class LevelDAO {
         }
     }
 
-    public static void main(String[] args) {
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        LevelDAO dao = new LevelDAO();
-        Level level = dao.getLevelbyID(7);
-        System.out.println(level);
-//        List<Level> list = dao.getLevelbyID(1);
-//        for (Level o : list) {
-//            System.out.println("LevelID: " + o.getLevelID()+ " Descriptions: " + o.getDesc());
-//        }
-
-//        int LevelID = 8; String Desc = "N12";
-//       String query = "INSERT INTO `level`(`LevelID`, `Desc`) VALUES (?,?)";
-//        try {
-//            conn = new DBConnection().getConnection();//mo ket noi voi sql
-//            ps = conn.prepareStatement(query);
-//            ps.setInt(1, LevelID);
-//            ps.setString(2, Desc);
-//            int row = ps.executeUpdate();
-//            if(row != 0){
-//                System.out.println("thêm thành công " + row);
-////                System.out.println("Update thành công " + row);
-////                System.out.println("Xoá thành công " + row);
-//            }
-//        } catch (Exception e) {
-//        }
-    }
 }

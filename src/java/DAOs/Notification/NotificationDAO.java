@@ -39,6 +39,7 @@ public class NotificationDAO {
                     
                     notifList.add(tmpNotif);
                 }
+                conn.close();
             }
             return notifList;
         } catch (SQLException ex) {
@@ -66,6 +67,7 @@ public class NotificationDAO {
                     notif.setStatus(rs.getInt("status"));
                     notif.setUserID(rs.getInt("userID"));
                 }
+                conn.close();
             }
             return notif;
         } catch (SQLException ex) {
@@ -87,6 +89,7 @@ public class NotificationDAO {
                 st.setInt(4, n.getUserID());
                 
                 st.executeUpdate();
+                conn.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(NotificationDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -108,6 +111,7 @@ public class NotificationDAO {
                 st.setInt(6, n.getNotificationID());
                 
                 st.executeUpdate();
+                conn.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(NotificationDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -123,6 +127,7 @@ public class NotificationDAO {
                 st.setInt(1, id);
                 
                 st.executeUpdate();
+                conn.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(NotificationDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -136,6 +141,7 @@ public class NotificationDAO {
                         + "WHERE notification.`notificationID` = ?;");
                 st.setInt(1, id);
                 st.executeUpdate();
+                conn.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(NotificationDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -149,6 +155,7 @@ public class NotificationDAO {
                         + "WHERE notification.`notificationID` = ?;");
                 st.setInt(1, id);
                 st.executeUpdate();
+                conn.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(NotificationDAO.class.getName()).log(Level.SEVERE, null, ex);
